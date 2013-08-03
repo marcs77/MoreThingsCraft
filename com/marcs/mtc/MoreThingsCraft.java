@@ -34,7 +34,7 @@ public class MoreThingsCraft {
 	
 	@EventHandler
 	public static void postInit(FMLPostInitializationEvent e){
-		
+		//Stub method
 	}
 	
 }
