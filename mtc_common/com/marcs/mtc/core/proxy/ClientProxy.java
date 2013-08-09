@@ -1,4 +1,4 @@
-package assets.com.marcs.mtc.core.proxy;
+package com.marcs.mtc.core.proxy;
 
 public class ClientProxy extends CommonProxy{
 	

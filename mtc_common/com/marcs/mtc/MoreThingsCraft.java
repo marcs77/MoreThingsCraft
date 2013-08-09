@@ -1,4 +1,4 @@
-package assets.com.marcs.mtc;
+package com.marcs.mtc;
 
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
@@ -8,8 +8,8 @@ import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.network.NetworkMod;
-import assets.com.marcs.mtc.core.proxy.CommonProxy;
-import assets.com.marcs.mtc.lib.Reference;
+import com.marcs.mtc.core.proxy.CommonProxy;
+import com.marcs.mtc.lib.Reference;
 
 
 @Mod(modid=Reference.MOD_ID, name=Reference.MOD_NAME, version=Reference.VERSION)
