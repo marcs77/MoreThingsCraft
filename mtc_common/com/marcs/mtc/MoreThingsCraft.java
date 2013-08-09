@@ -8,6 +8,8 @@ import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.network.NetworkMod;
+
+import com.marcs.mtc.block.ModBlocks;
 import com.marcs.mtc.core.proxy.CommonProxy;
 import com.marcs.mtc.lib.Reference;
 
@@ -24,6 +26,8 @@ public class MoreThingsCraft {
 	
 	@EventHandler
 	public static void preInit(FMLPreInitializationEvent e){
+	
+		ModBlocks.initBlocks();
 		
 	}
 	

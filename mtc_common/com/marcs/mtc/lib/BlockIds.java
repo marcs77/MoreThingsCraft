@@ -1,5 +1,5 @@
 package com.marcs.mtc.lib;
 
 public class BlockIds {
-	public static final int FIRST_ID = 600;
+	public static final int COBALT_ORE = 600;
 }
