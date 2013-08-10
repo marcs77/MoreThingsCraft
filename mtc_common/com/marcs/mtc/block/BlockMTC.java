@@ -25,7 +25,7 @@ public class BlockMTC extends Block{
 		reg.registerIcon(String.format("%s:%s", Reference.MOD_ID.toLowerCase(), getUnwrappedUnlocalizedName()));
 	}
 	
-	protected String getUnwrappedUnlocalizedName(){
+	public String getUnwrappedUnlocalizedName(){
 		return this.getUnlocalizedName().substring(this.getUnlocalizedName().indexOf('.')+1);
 	}
 }
