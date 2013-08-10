@@ -11,9 +11,13 @@ public class ModBlocks {
 	public static Block cobaltOre;
 	
 	public static void initBlocks(){
-		cobaltOre = new BlockMTC(BlockIds.COBALT_ORE, Material.rock).setUnlocalizedName("cobaltOre");
-		
-		GameRegistry.registerBlock(cobaltOre, ((BlockMTC) cobaltOre).getUnwrappedUnlocalizedName());
+		cobaltOre = registerStandardBlock(BlockIds.COBALT_ORE, Material.rock, "cobaltOre", false);
+	}
+	
+	private static Block registerStandardBlock(int id, Material mat, String unlocalizedName, boolean isOre){
+		Block newBlock = new BlockMTC(id, mat).setUnlocalizedName(unlocalizedName).setHardness(isOre ? 3.0F : 5.0F).setResistance(isOre ? 5.0F : 8.5F);
+		GameRegistry.registerBlock(newBlock, unlocalizedName);
+		return newBlock;
 	}
 	
 }
