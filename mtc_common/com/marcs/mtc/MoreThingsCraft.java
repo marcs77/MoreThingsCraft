@@ -10,6 +10,7 @@ import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.network.NetworkMod;
 
 import com.marcs.mtc.block.ModBlocks;
+import com.marcs.mtc.core.handler.LocalizationHandler;
 import com.marcs.mtc.core.proxy.CommonProxy;
 import com.marcs.mtc.lib.Reference;
 
@@ -28,6 +29,8 @@ public class MoreThingsCraft {
 	public static void preInit(FMLPreInitializationEvent e){
 	
 		ModBlocks.initBlocks();
+		
+		LocalizationHandler.loadLanguages();
 		
 	}
 	
