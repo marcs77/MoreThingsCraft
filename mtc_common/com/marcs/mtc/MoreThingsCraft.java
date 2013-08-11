@@ -1,5 +1,7 @@
 package com.marcs.mtc;
 
+import java.io.File;
+
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.Mod.Instance;
@@ -10,6 +12,7 @@ import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.network.NetworkMod;
 
 import com.marcs.mtc.block.ModBlocks;
+import com.marcs.mtc.config.ModConfig;
 import com.marcs.mtc.core.handler.LocalizationHandler;
 import com.marcs.mtc.core.proxy.CommonProxy;
 import com.marcs.mtc.lib.Reference;
@@ -27,10 +30,15 @@ public class MoreThingsCraft {
 	
 	@EventHandler
 	public static void preInit(FMLPreInitializationEvent e){
-	
-		ModBlocks.initBlocks();
 		
 		LocalizationHandler.loadLanguages();
+		
+		ModConfig.initConfig(new File(e.getModConfigurationDirectory().getAbsolutePath()
+				+File.separator
+				+Reference.CHANNEL_NAME
+				+File.separator+Reference.MOD_NAME+".cfg"));
+		
+		ModBlocks.initBlocks();
 		
 	}
 	
