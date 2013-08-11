@@ -22,7 +22,8 @@ public class BlockMTC extends Block{
 	@SideOnly(Side.CLIENT)
 	@Override
 	public void registerIcons(IconRegister reg){
-		reg.registerIcon(String.format("%s:%s", Reference.MOD_ID.toLowerCase(), getUnwrappedUnlocalizedName()));
+		this.blockIcon = reg.registerIcon(String.format("%s:%s", Reference.MOD_ID.toLowerCase(), getUnwrappedUnlocalizedName()));
+		System.out.println(String.format("%s:%s", Reference.MOD_ID.toLowerCase(), getUnwrappedUnlocalizedName()));
 	}
 	
 	public String getUnwrappedUnlocalizedName(){
