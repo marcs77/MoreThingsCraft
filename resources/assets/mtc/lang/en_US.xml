@@ -3,4 +3,5 @@
 <properties version="1.0">
 	<comment>English (en_US) Localization File</comment>
 	<entry key="tile.cobaltOre.name">Cobalt Ore</entry>
+	<entry key="item.cobaltIngot.name">Cobalt Ingot</entry>
 </properties>

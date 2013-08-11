@@ -1,31 +1,29 @@
-package com.marcs.mtc.block;
+package com.marcs.mtc.item;
 
 import com.marcs.mtc.lib.Reference;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
-
-import net.minecraft.block.Block;
-import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.item.Item;
 
-public class BlockMTC extends Block{
+public class ItemMTC extends Item{
 
-	public BlockMTC(int par1, Material par2Material) {
-		super(par1, par2Material);
-		this.setCreativeTab(CreativeTabs.tabBlock);
-		this.setHardness(3.0F);
-		this.setResistance(5.0F);
+	public ItemMTC(int par1) {
+		super(par1);
+		this.setCreativeTab(CreativeTabs.tabMaterials);
+		this.setMaxStackSize(64);
 	}
 	
 	@SideOnly(Side.CLIENT)
 	@Override
 	public void registerIcons(IconRegister reg){
-		this.blockIcon = reg.registerIcon(String.format("%s:%s", Reference.MOD_ID.toLowerCase(), getUnwrappedUnlocalizedName()));
+		this.itemIcon = reg.registerIcon(String.format("%s:%s", Reference.MOD_ID.toLowerCase(), getUnwrappedUnlocalizedName()));
 	}
 	
 	public String getUnwrappedUnlocalizedName(){
 		return this.getUnlocalizedName().substring(this.getUnlocalizedName().indexOf('.')+1);
 	}
+	
 }

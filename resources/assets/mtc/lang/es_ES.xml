@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties version="1.0">
+	<comment>Spanish (es_ES) Localization File</comment>
+	<entry key="tile.cobaltOre.name">Mena de Cobalto</entry>
+	<entry key="item.cobaltIngot.name">Lingote de Cobalto</entry>
+</properties>

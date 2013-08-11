@@ -4,6 +4,7 @@ import java.io.File;
 import java.util.logging.Level;
 
 import com.marcs.mtc.lib.BlockIds;
+import com.marcs.mtc.lib.ItemIds;
 import com.marcs.mtc.lib.Reference;
 import com.marcs.mtc.lib.Strings;
 
@@ -29,6 +30,9 @@ public class ModConfig {
 		
 		//BlockIds
 		BlockIds.COBALT_ORE = config.getBlock(Strings.COBALT_ORE_NAME, BlockIds.COBALT_ORE_DEF).getInt(BlockIds.COBALT_ORE_DEF);
+		
+		//ItemIds
+		ItemIds.COBALT_INGOT = config.getItem(Strings.COBALT_INGOT_NAME, ItemIds.COBALT_INGOT_DEF).getInt(ItemIds.COBALT_INGOT_DEF);
 		}catch(Exception e){
 			FMLLog.log(Level.SEVERE, e, Reference.MOD_ID+" has had a problem loading its configuration.");
 		}finally{
