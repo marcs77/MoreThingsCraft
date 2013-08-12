@@ -10,6 +10,7 @@ import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.network.NetworkMod;
+import cpw.mods.fml.common.registry.GameRegistry;
 
 import com.marcs.mtc.block.ModBlocks;
 import com.marcs.mtc.config.ModConfig;
@@ -18,6 +19,7 @@ import com.marcs.mtc.core.proxy.CommonProxy;
 import com.marcs.mtc.crafting.ModCrafting;
 import com.marcs.mtc.item.ModItems;
 import com.marcs.mtc.lib.Reference;
+import com.marcs.mtc.worldgen.WorldGeneratorMTC;
 
 
 @Mod(modid=Reference.MOD_ID, name=Reference.MOD_NAME, version=Reference.VERSION)
@@ -49,6 +51,8 @@ public class MoreThingsCraft {
 	@EventHandler
 	public static void init(FMLInitializationEvent e){
 		proxy.registerRenders();
+		
+		GameRegistry.registerWorldGenerator(new WorldGeneratorMTC());
 	}
 	
 	@EventHandler
