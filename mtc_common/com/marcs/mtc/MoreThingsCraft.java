@@ -15,6 +15,7 @@ import com.marcs.mtc.block.ModBlocks;
 import com.marcs.mtc.config.ModConfig;
 import com.marcs.mtc.core.handler.LocalizationHandler;
 import com.marcs.mtc.core.proxy.CommonProxy;
+import com.marcs.mtc.crafting.ModCrafting;
 import com.marcs.mtc.item.ModItems;
 import com.marcs.mtc.lib.Reference;
 
@@ -41,6 +42,8 @@ public class MoreThingsCraft {
 		
 		ModBlocks.initBlocks();
 		ModItems.initItems();
+		
+		ModCrafting.initRecipes();
 	}
 	
 	@EventHandler
