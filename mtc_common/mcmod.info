@@ -1,0 +1,20 @@
+[
+{
+  "modid": "MTC",
+  "name": "MoreThingsCraft",
+  "description": "A Minecraft Mod that adds more ores, tools, armor and much more!!",
+  "version": "pre1",
+  "url": "https://github.com/marcs77/MoreThingsCraft",
+  "updateUrl": "https://github.com/marcs77/MoreThingsCraft",
+  "authorList": [
+    "marcs77"
+  ],
+  "credits": "Code by marcs77 and textures by maikelurri",
+  "logoFile": "",
+  "screenshots": [
+  ],
+  "parent":"",
+  "dependencies": [
+  ]
+}
+]

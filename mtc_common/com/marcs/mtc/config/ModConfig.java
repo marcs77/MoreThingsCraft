@@ -30,6 +30,15 @@ public class ModConfig {
 		
 		//BlockIds
 		BlockIds.COBALT_ORE = config.getBlock(Strings.COBALT_ORE_NAME, BlockIds.COBALT_ORE_DEF).getInt(BlockIds.COBALT_ORE_DEF);
+		BlockIds.TITANIUM_ORE = config.getBlock(Strings.TITANIUM_ORE_NAME, BlockIds.TITANIUM_ORE_DEF).getInt(BlockIds.TITANIUM_ORE_DEF);
+		BlockIds.MAGNETITE_ORE = config.getBlock(Strings.MAGNETITE_ORE_NAME, BlockIds.MAGNETITE_ORE_DEF).getInt(BlockIds.MAGNETITE_ORE_DEF);
+		BlockIds.COPPER_ORE = config.getBlock(Strings.COPPER_ORE_NAME, BlockIds.COPPER_ORE_DEF).getInt(BlockIds.COPPER_ORE_DEF);
+		BlockIds.TIN_ORE = config.getBlock(Strings.TIN_ORE_NAME, BlockIds.TIN_ORE_DEF).getInt(BlockIds.TIN_ORE_DEF);
+		BlockIds.COBALT_BLOCK = config.getBlock(Strings.COBALT_BLOCK_NAME, BlockIds.COBALT_BLOCK_DEF).getInt(BlockIds.COBALT_BLOCK_DEF);
+		BlockIds.TITANIUM_BLOCK = config.getBlock(Strings.TITANIUM_BLOCK_NAME, BlockIds.TITANIUM_BLOCK_DEF).getInt(BlockIds.TITANIUM_BLOCK_DEF);
+		BlockIds.MAGNETITE_BLOCK = config.getBlock(Strings.MAGNETITE_BLOCK_NAME, BlockIds.MAGNETITE_BLOCK_DEF).getInt(BlockIds.MAGNETITE_BLOCK_DEF);
+		BlockIds.COPPER_BLOCK = config.getBlock(Strings.COPPER_BLOCK_NAME, BlockIds.COPPER_BLOCK_DEF).getInt(BlockIds.COPPER_BLOCK_DEF);
+		BlockIds.TIN_BLOCK = config.getBlock(Strings.TIN_BLOCK_NAME, BlockIds.TIN_BLOCK_DEF).getInt(BlockIds.TIN_BLOCK_DEF);
 		
 		//ItemIds
 		ItemIds.COBALT_INGOT = config.getItem(Strings.COBALT_INGOT_NAME, ItemIds.COBALT_INGOT_DEF).getInt(ItemIds.COBALT_INGOT_DEF);
