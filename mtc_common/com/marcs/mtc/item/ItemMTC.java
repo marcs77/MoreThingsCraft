@@ -1,18 +1,18 @@
 package com.marcs.mtc.item;
 
+import com.marcs.mtc.MoreThingsCraft;
 import com.marcs.mtc.lib.Reference;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.client.renderer.texture.IconRegister;
-import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 
 public class ItemMTC extends Item{
 
 	public ItemMTC(int par1) {
 		super(par1);
-		this.setCreativeTab(CreativeTabs.tabMaterials);
+		this.setCreativeTab(MoreThingsCraft.tabMTC);
 		this.setMaxStackSize(64);
 	}
 	

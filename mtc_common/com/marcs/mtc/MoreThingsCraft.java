@@ -2,6 +2,8 @@ package com.marcs.mtc;
 
 import java.io.File;
 
+import net.minecraft.creativetab.CreativeTabs;
+
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.Mod.Instance;
@@ -22,7 +24,7 @@ import com.marcs.mtc.lib.Reference;
 import com.marcs.mtc.worldgen.WorldGeneratorMTC;
 
 
-@Mod(modid=Reference.MOD_ID, name=Reference.MOD_NAME, version=Reference.VERSION)
+@Mod(modid=Reference.MOD_ID, name=Reference.MOD_NAME, version=Reference.VERSION, dependencies = Reference.DEPENDENCIES)
 @NetworkMod(clientSideRequired = true, serverSideRequired=false)
 public class MoreThingsCraft {
 	
@@ -31,6 +33,8 @@ public class MoreThingsCraft {
 	
 	@SidedProxy(clientSide=Reference.CLIENT_PROXY_CLASS, serverSide=Reference.COMMON_PROXY_CLASS)
 	public static CommonProxy proxy;
+	
+	public static CreativeTabs tabMTC = new CreativeTabs(CreativeTabs.getNextID(), Reference.MOD_ID);
 	
 	@EventHandler
 	public static void preInit(FMLPreInitializationEvent e){
@@ -51,6 +55,8 @@ public class MoreThingsCraft {
 	@EventHandler
 	public static void init(FMLInitializationEvent e){
 		proxy.registerRenders();
+		
+		
 		
 		GameRegistry.registerWorldGenerator(new WorldGeneratorMTC());
 	}
