@@ -4,5 +4,18 @@
 	<comment>English (en_US) Localization File</comment>
 	<entry key="itemGroup.MTC">More Things Craft</entry>
 	<entry key="tile.cobaltOre.name">Cobalt Ore</entry>
+	<entry key="tile.titaniumOre.name">Titanium Ore</entry>
+	<entry key="tile.magnetiteOre.name">Magnetite Ore</entry>
+	<entry key="tile.copperOre.name">Copper Ore</entry>
+	<entry key="tile.tinOre.name">Tin Ore</entry>
+	<entry key="tile.cobaltBlock.name">Cobalt Block</entry>
+	<entry key="tile.titaniumBlock.name">Titanium Block</entry>
+	<entry key="tile.magnetiteBlock.name">Magnetite Block</entry>
+	<entry key="tile.copperBlock.name">Copper Block</entry>
+	<entry key="tile.tinBlock.name">Tin Block</entry>
 	<entry key="item.cobaltIngot.name">Cobalt Ingot</entry>
+	<entry key="item.titaniumIngot.name">Titanium Ingot</entry>
+	<entry key="item.magnetiteIngot.name">Magnetite Ingot</entry>
+	<entry key="item.copperIngot.name">Copper Ingot</entry>
+	<entry key="item.tinIngot.name">Tin Ingot</entry>
 </properties>

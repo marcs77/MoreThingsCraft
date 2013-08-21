@@ -13,7 +13,6 @@ public class MTCCreativeTab extends CreativeTabs{
 		// TODO Auto-generated constructor stub
 	}
 	
-	@Override
 	@SideOnly(Side.CLIENT)
 	/**
 	 * the itemID for the item to be displayed on the tab

@@ -42,6 +42,11 @@ public class ModConfig {
 		
 		//ItemIds
 		ItemIds.COBALT_INGOT = config.getItem(Strings.COBALT_INGOT_NAME, ItemIds.COBALT_INGOT_DEF).getInt(ItemIds.COBALT_INGOT_DEF);
+		ItemIds.TITANIUM_INGOT = config.getItem(Strings.TITANIUM_INGOT_NAME, ItemIds.TITANIUM_INGOT_DEF).getInt(ItemIds.TITANIUM_INGOT_DEF);
+		ItemIds.MAGNETITE_INGOT = config.getItem(Strings.MAGNETITE_INGOT_NAME, ItemIds.MAGNETITE_INGOT_DEF).getInt(ItemIds.MAGNETITE_INGOT_DEF);
+		ItemIds.COPPER_INGOT = config.getItem(Strings.COPPER_INGOT_NAME, ItemIds.COPPER_INGOT_DEF).getInt(ItemIds.COPPER_INGOT_DEF);
+		ItemIds.TIN_INGOT = config.getItem(Strings.TIN_INGOT_NAME, ItemIds.TIN_INGOT_DEF).getInt(ItemIds.TIN_INGOT_DEF);
+		
 		}catch(Exception e){
 			FMLLog.log(Level.SEVERE, e, Reference.MOD_ID+" has had a problem loading its configuration.");
 		}finally{

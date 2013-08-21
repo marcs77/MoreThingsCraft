@@ -16,4 +16,8 @@ public class Strings {
 	
 	//Item
 	public static final String COBALT_INGOT_NAME = "cobaltIngot";
+	public static final String TITANIUM_INGOT_NAME = "titaniumIngot";
+	public static final String MAGNETITE_INGOT_NAME = "magnetiteIngot";
+	public static final String COPPER_INGOT_NAME = "copperIngot";
+	public static final String TIN_INGOT_NAME = "tinIngot";
 }

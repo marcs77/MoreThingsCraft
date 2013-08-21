@@ -11,7 +11,7 @@ import net.minecraft.item.Item;
 public class ItemMTC extends Item{
 
 	public ItemMTC(int par1) {
-		super(par1);
+		super(par1-Reference.SHIFTED_ID_RANGE_CORRECTION);
 		this.setCreativeTab(MoreThingsCraft.tabMTC);
 		this.setMaxStackSize(64);
 	}
