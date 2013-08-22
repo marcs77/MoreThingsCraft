@@ -10,7 +10,7 @@ public class LocalizationHandler {
 	public static void loadLanguages(){
 		for(String file : Localizations.localeFiles){
 			LanguageRegistry.instance().loadLocalization(file, LocalizationHelper.getLocaleFromFileName(file), LocalizationHelper.isXML(file));
-			System.out.println("Localization file loaded: "+ file+" "+LocalizationHelper.getLocaleFromFileName(file));
+			System.out.println("[MoreThingsCraft] Localization file loaded: "+ file+" "+LocalizationHelper.getLocaleFromFileName(file));
 		}
 	}
 	

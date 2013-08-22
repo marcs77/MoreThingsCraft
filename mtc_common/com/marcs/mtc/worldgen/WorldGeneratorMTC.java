@@ -24,7 +24,7 @@ public class WorldGeneratorMTC implements IWorldGenerator{
 			generateSurface(world, random, chunkX*16, chunkZ*16);
 		}
 		case -1:{//Nether
-			generateSurface(world, random, chunkX*16, chunkZ*16);
+			generateNether(world, random, chunkX*16, chunkZ*16);
 		}
 		default: {//Other dimensions: Mystcraft ages, twilighgt ...
 			generateSurface(world, random, chunkX*16, chunkZ*16);
@@ -33,9 +33,27 @@ public class WorldGeneratorMTC implements IWorldGenerator{
 		
 	}
 
+	private void generateNether(World world, Random random, int i, int j) {
+		generateMinableNether(ModBlocks.titaniumOre, 5, 3, world, random, i, j);
+		generateMinableNether(ModBlocks.magnetiteOre, 8, 5, world, random, i, j);
+	}
+
+	private void generateMinableNether(Block b, int veinPerChunk, int veinSize,
+			World world, Random random, int i, int j) {
+		for(int h=0; h<veinPerChunk; h++){
+			int xCoord = i+random.nextInt(16);
+			int yCoord = random.nextInt(108)+10;
+			int zCoord = j+random.nextInt(16);
+			
+			(new WorldGenMinable(b.blockID, veinSize, Block.netherrack.blockID)).generate(world, random, xCoord, yCoord, zCoord);
+		}
+	}
+
 	private void generateSurface(World world, Random random, int i, int j) {
 		// TODO Auto-generated method stub
-		generateMinable(ModBlocks.cobaltOre, 3, 6, 28, 0, world, random, i, j);
+		generateMinable(ModBlocks.cobaltOre, 2, 5, 20, 0, world, random, i, j);
+		generateMinable(ModBlocks.copperOre, 4, 10, 60, 20, world, random, i, j);
+		generateMinable(ModBlocks.tinOre, 4, 10, 60, 20, world, random, i, j);
 	}
 	
 	private void generateMinable(Block b,int veinPerChunk, int veinSize, int maxAlt, int minAlt, World world, Random random, int i, int j){
@@ -44,7 +62,7 @@ public class WorldGeneratorMTC implements IWorldGenerator{
 			int yCoord = minAlt+random.nextInt(maxAlt-minAlt);
 			int zCoord = j+random.nextInt(16);
 			
-			(new WorldGenMinable(b.blockID, 6)).generate(world, random, xCoord, yCoord, zCoord);
+			(new WorldGenMinable(b.blockID, veinSize)).generate(world, random, xCoord, yCoord, zCoord);
 		}
 	}
 
