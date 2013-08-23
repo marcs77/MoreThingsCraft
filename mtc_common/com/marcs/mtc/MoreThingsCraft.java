@@ -3,6 +3,7 @@ package com.marcs.mtc;
 import java.io.File;
 
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraftforge.oredict.OreDictionary;
 
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
@@ -56,11 +57,20 @@ public class MoreThingsCraft {
 	public static void init(FMLInitializationEvent e){
 		proxy.registerRenders();
 		
-		
+		oreDictRegistry();
 		
 		GameRegistry.registerWorldGenerator(new WorldGeneratorMTC());
 	}
 	
+	private static void oreDictRegistry() {
+		//Ores
+		OreDictionary.registerOre("oreCopper", 	ModBlocks.copperOre);
+		OreDictionary.registerOre("oreTin", ModBlocks.tinOre);
+		//Ingots
+		OreDictionary.registerOre("ingotCopper", ModItems.copperIngot);
+		OreDictionary.registerOre("ingotCopper", ModItems.tinIngot);
+	}
+
 	@EventHandler
 	public static void postInit(FMLPostInitializationEvent e){
 		//Stub method

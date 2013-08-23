@@ -3,6 +3,7 @@ package com.marcs.mtc.worldgen;
 import java.util.Random;
 
 import com.marcs.mtc.block.ModBlocks;
+import com.marcs.mtc.config.ModConfig;
 
 import net.minecraft.block.Block;
 import net.minecraft.world.World;
@@ -34,12 +35,14 @@ public class WorldGeneratorMTC implements IWorldGenerator{
 	}
 
 	private void generateNether(World world, Random random, int i, int j) {
+		
 		generateMinableNether(ModBlocks.titaniumOre, 5, 3, world, random, i, j);
 		generateMinableNether(ModBlocks.magnetiteOre, 8, 5, world, random, i, j);
 	}
 
 	private void generateMinableNether(Block b, int veinPerChunk, int veinSize,
 			World world, Random random, int i, int j) {
+		
 		for(int h=0; h<veinPerChunk; h++){
 			int xCoord = i+random.nextInt(16);
 			int yCoord = random.nextInt(108)+10;
@@ -50,10 +53,13 @@ public class WorldGeneratorMTC implements IWorldGenerator{
 	}
 
 	private void generateSurface(World world, Random random, int i, int j) {
-		// TODO Auto-generated method stub
+
 		generateMinable(ModBlocks.cobaltOre, 2, 5, 20, 0, world, random, i, j);
-		generateMinable(ModBlocks.copperOre, 4, 10, 60, 20, world, random, i, j);
-		generateMinable(ModBlocks.tinOre, 4, 10, 60, 20, world, random, i, j);
+
+		if(ModConfig.enableCopperTinWorldGen){
+			generateMinable(ModBlocks.copperOre, 4, 10, 60, 20, world, random, i, j);
+			generateMinable(ModBlocks.tinOre, 4, 10, 60, 20, world, random, i, j);
+		}
 	}
 	
 	private void generateMinable(Block b,int veinPerChunk, int veinSize, int maxAlt, int minAlt, World world, Random random, int i, int j){
