@@ -36,7 +36,7 @@ public class WorldGeneratorMTC implements IWorldGenerator{
 
 	private void generateNether(World world, Random random, int i, int j) {
 		
-		generateMinableNether(ModBlocks.titaniumOre, 5, 3, world, random, i, j);
+		generateMinableNether(ModBlocks.titaniumOre, 5, 8, world, random, i, j);
 		generateMinableNether(ModBlocks.magnetiteOre, 8, 5, world, random, i, j);
 	}
 
