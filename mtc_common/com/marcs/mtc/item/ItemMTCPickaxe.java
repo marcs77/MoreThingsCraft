@@ -1,14 +1,19 @@
 package com.marcs.mtc.item;
 
+import java.util.List;
+
 import com.marcs.mtc.MoreThingsCraft;
+import com.marcs.mtc.core.helper.LocalizationHelper;
 import com.marcs.mtc.lib.Reference;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
 import net.minecraft.client.renderer.texture.IconRegister;
+import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.EnumToolMaterial;
 import net.minecraft.item.ItemPickaxe;
+import net.minecraft.item.ItemStack;
 
 public class ItemMTCPickaxe extends ItemPickaxe{
 
@@ -27,5 +32,13 @@ public class ItemMTCPickaxe extends ItemPickaxe{
 	public String getUnwrappedUnlocalizedName(){
 		return this.getUnlocalizedName().substring(this.getUnlocalizedName().indexOf('.')+1);
 	}
+	
+	@SuppressWarnings({"unchecked" })
+	@Override
+	@SideOnly(Side.CLIENT)
+	public void addInformation(ItemStack stack, EntityPlayer player, @SuppressWarnings("rawtypes") List info, boolean extraInfo){
+		info.add(String.format(LocalizationHelper.getLocalizationString("info.damagetool"), this.getMaxDamage() - stack.getItemDamage()));
+	}
+
 
 }

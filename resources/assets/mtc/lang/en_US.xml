@@ -18,4 +18,5 @@
 	<entry key="item.magnetiteIngot.name">Magnetite Ingot</entry>
 	<entry key="item.copperIngot.name">Copper Ingot</entry>
 	<entry key="item.tinIngot.name">Tin Ingot</entry>
+	<entry key="info.damagetool">This tool has %d uses left.</entry>
 </properties>
