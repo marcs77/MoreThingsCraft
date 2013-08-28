@@ -1,4 +1,4 @@
-package com.marcs.mtc.config;
+package com.marcs.mtc.core.handler;
 
 import java.io.File;
 import java.util.logging.Level;
@@ -12,7 +12,7 @@ import cpw.mods.fml.common.FMLLog;
 
 import net.minecraftforge.common.Configuration;
 
-public class ModConfig {
+public class ConfigurationHandler {
 	
 	public static Configuration config;
 	

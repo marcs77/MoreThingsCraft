@@ -3,7 +3,7 @@ package com.marcs.mtc.worldgen;
 import java.util.Random;
 
 import com.marcs.mtc.block.ModBlocks;
-import com.marcs.mtc.config.ModConfig;
+import com.marcs.mtc.core.handler.ConfigurationHandler;
 
 import net.minecraft.block.Block;
 import net.minecraft.world.World;
@@ -56,7 +56,7 @@ public class WorldGeneratorMTC implements IWorldGenerator{
 
 		generateMinable(ModBlocks.cobaltOre, 2, 5, 20, 0, world, random, i, j);
 
-		if(ModConfig.enableCopperTinWorldGen){
+		if(ConfigurationHandler.enableCopperTinWorldGen){
 			generateMinable(ModBlocks.copperOre, 4, 10, 60, 20, world, random, i, j);
 			generateMinable(ModBlocks.tinOre, 4, 10, 60, 20, world, random, i, j);
 		}

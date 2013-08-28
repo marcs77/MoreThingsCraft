@@ -16,8 +16,9 @@ import cpw.mods.fml.common.network.NetworkMod;
 import cpw.mods.fml.common.registry.GameRegistry;
 
 import com.marcs.mtc.block.ModBlocks;
-import com.marcs.mtc.config.ModConfig;
+import com.marcs.mtc.core.handler.ConfigurationHandler;
 import com.marcs.mtc.core.handler.LocalizationHandler;
+import com.marcs.mtc.core.helper.PacketHandler;
 import com.marcs.mtc.core.proxy.CommonProxy;
 import com.marcs.mtc.crafting.ModCrafting;
 import com.marcs.mtc.item.ModItems;
@@ -26,7 +27,7 @@ import com.marcs.mtc.worldgen.WorldGeneratorMTC;
 
 
 @Mod(modid=Reference.MOD_ID, name=Reference.MOD_NAME, version=Reference.VERSION, dependencies = Reference.DEPENDENCIES)
-@NetworkMod(clientSideRequired = true, serverSideRequired=false)
+@NetworkMod(channels={Reference.CHANNEL_NAME}, clientSideRequired = true, serverSideRequired=false, packetHandler = PacketHandler.class)
 public class MoreThingsCraft {
 	
 	@Instance
@@ -42,7 +43,7 @@ public class MoreThingsCraft {
 		
 		LocalizationHandler.loadLanguages();
 		
-		ModConfig.initConfig(new File(e.getModConfigurationDirectory().getAbsolutePath()
+		ConfigurationHandler.initConfig(new File(e.getModConfigurationDirectory().getAbsolutePath()
 				+File.separator
 				+Reference.CHANNEL_NAME
 				+File.separator+Reference.MOD_NAME+".cfg"));
@@ -50,12 +51,14 @@ public class MoreThingsCraft {
 		ModBlocks.initBlocks();
 		ModItems.initItems();
 		
-		ModCrafting.initRecipes();
+		proxy.registerSounds();
 	}
 	
 	@EventHandler
 	public static void init(FMLInitializationEvent e){
 		proxy.registerRenders();
+		
+		ModCrafting.initRecipes();
 		
 		oreDictRegistry();
 		

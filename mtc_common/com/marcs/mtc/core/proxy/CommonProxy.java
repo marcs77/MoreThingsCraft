@@ -6,4 +6,8 @@ public class CommonProxy {
 		//NO CODE HERE
 	}
 	
+	public void registerSounds(){
+		//NO CODE HERE
+	}
+	
 }
