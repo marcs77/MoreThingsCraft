@@ -34,8 +34,8 @@ public class ModItems {
 	public static Item magnetiteHoe;
 	
 	public static final EnumToolMaterial COBALT = EnumHelper.addToolMaterial(Reference.MOD_ID+"_COBALT", 2, 1000, 8.0F, 3.0F, 11);
-	public static final EnumToolMaterial MAGNETITE = EnumHelper.addToolMaterial(Reference.MOD_ID+"_MAGNETITE", 2, 1000, 8.0F, 3.0F, 11);
-	public static final EnumToolMaterial TITANIUM = EnumHelper.addToolMaterial(Reference.MOD_ID+"_TITANIUM", 3, 800, 11.0F, 4.0F, 11);
+	public static final EnumToolMaterial MAGNETITE = EnumHelper.addToolMaterial(Reference.MOD_ID+"_MAGNETITE", 2, 250, 8.0F, 2.5F, 11);
+	public static final EnumToolMaterial TITANIUM = EnumHelper.addToolMaterial(Reference.MOD_ID+"_TITANIUM", 3, 900, 11.0F, 4.0F, 11);
 	
 	public static void initItems(){
 		cobaltIngot = new ItemMTC(ItemIds.COBALT_INGOT).setUnlocalizedName(Strings.COBALT_INGOT_NAME);
