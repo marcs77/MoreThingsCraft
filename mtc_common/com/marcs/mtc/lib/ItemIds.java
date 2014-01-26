@@ -29,6 +29,12 @@ public class ItemIds {
 	public static final int MAGNETITE_SWORD_DEF = 5018;
 	public static final int MAGNETITE_HOE_DEF = 5019;
 	
+	/* Armor */
+	//Cobalt
+	public static final int COBALT_HELMET_DEF = 5020;
+	public static final int COBALT_PLATE_DEF = 5021;
+	public static final int COBALT_LEGGINS_DEF = 5022;
+	public static final int COBALT_SHOES_DEF = 5023;
 	
 	/** Config IDs**/
 	public static int COBALT_INGOT;
@@ -56,4 +62,11 @@ public class ItemIds {
 	public static int MAGNETITE_SHOVEL;
 	public static int MAGNETITE_SWORD;
 	public static int MAGNETITE_HOE;
+	
+	/* Armor */
+	//Cobalt
+	public static int COBALT_HELMET;
+	public static int COBALT_PLATE;
+	public static int COBALT_LEGGINS;
+	public static int COBALT_SHOES;
 }

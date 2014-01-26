@@ -34,6 +34,8 @@ public class ModBlocks {
 		magnetiteBlock = registerStandardBlock(BlockIds.MAGNETITE_BLOCK, Material.rock, Strings.MAGNETITE_BLOCK_NAME, true);
 		copperBlock = registerStandardBlock(BlockIds.COPPER_BLOCK, Material.rock, Strings.COPPER_BLOCK_NAME, true);
 		tinBlock = registerStandardBlock(BlockIds.TIN_BLOCK, Material.rock, Strings.TIN_BLOCK_NAME, true);
+	
+		
 	}
 	
 	private static Block registerStandardBlock(int id, Material mat, String unlocalizedName, boolean isOre){

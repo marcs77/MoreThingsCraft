@@ -6,6 +6,10 @@ public class CommonProxy {
 		//NO CODE HERE
 	}
 	
+	public int addArmor(String armor){
+		return 0;
+	}
+	
 	public void registerSounds(){
 		//NO CODE HERE
 	}

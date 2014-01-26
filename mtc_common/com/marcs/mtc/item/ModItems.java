@@ -4,6 +4,7 @@ import com.marcs.mtc.lib.ItemIds;
 import com.marcs.mtc.lib.Reference;
 import com.marcs.mtc.lib.Strings;
 
+import net.minecraft.item.EnumArmorMaterial;
 import net.minecraft.item.EnumToolMaterial;
 import net.minecraft.item.Item;
 import net.minecraftforge.common.EnumHelper;
@@ -33,9 +34,16 @@ public class ModItems {
 	public static Item magnetiteSword;
 	public static Item magnetiteHoe;
 	
+	public static Item cobaltHelmet;
+	public static Item cobaltPlate;
+	public static Item cobaltLeggins;
+	public static Item cobaltShoes;
+	
 	public static final EnumToolMaterial COBALT = EnumHelper.addToolMaterial(Reference.MOD_ID+"_COBALT", 2, 1000, 8.0F, 3.0F, 11);
 	public static final EnumToolMaterial MAGNETITE = EnumHelper.addToolMaterial(Reference.MOD_ID+"_MAGNETITE", 2, 250, 8.0F, 2.5F, 11);
 	public static final EnumToolMaterial TITANIUM = EnumHelper.addToolMaterial(Reference.MOD_ID+"_TITANIUM", 3, 900, 11.0F, 4.0F, 11);
+	
+	public static final EnumArmorMaterial COBALT_ARMOR = EnumHelper.addArmorMaterial(Reference.MOD_ID+"_COBALT", 20, new int[]{2,6,6,3}, 11);
 	
 	public static void initItems(){
 		cobaltIngot = new ItemMTC(ItemIds.COBALT_INGOT).setUnlocalizedName(Strings.COBALT_INGOT_NAME);
@@ -65,5 +73,12 @@ public class ModItems {
 		magnetiteShovel = new ItemMTCShovel(ItemIds.MAGNETITE_SHOVEL, MAGNETITE).setUnlocalizedName(Strings.MAGNETITE_SHOVEL_NAME);
 		magnetiteSword = new ItemMTCSword(ItemIds.MAGNETITE_SWORD, MAGNETITE).setUnlocalizedName(Strings.MAGNETITE_SWORD_NAME);
 		magnetiteHoe = new ItemMTCHoe(ItemIds.MAGNETITE_HOE, MAGNETITE).setUnlocalizedName(Strings.MAGNETITE_HOE_NAME);
+		
+		/** Armor **/
+		//Cobalt
+		cobaltHelmet = new ItemMTCArmor(ItemIds.COBALT_HELMET, COBALT_ARMOR, Strings.COBALT_HELMET_NAME, 0);
+		cobaltPlate = new ItemMTCArmor(ItemIds.COBALT_PLATE, COBALT_ARMOR, Strings.COBALT_PLATE_NAME, 1);
+		cobaltLeggins = new ItemMTCArmor(ItemIds.COBALT_LEGGINS, COBALT_ARMOR, Strings.COBALT_LEGGINS_NAME, 2);
+		cobaltShoes = new ItemMTCArmor(ItemIds.COBALT_SHOES, COBALT_ARMOR, Strings.COBALT_SHOES_NAME, 3);
 	}
 }

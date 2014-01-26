@@ -69,6 +69,13 @@ public class ConfigurationHandler {
 		ItemIds.MAGNETITE_SWORD = config.getItem(Strings.MAGNETITE_SWORD_NAME, ItemIds.MAGNETITE_SWORD_DEF).getInt(ItemIds.MAGNETITE_SWORD_DEF);
 		ItemIds.MAGNETITE_HOE = config.getItem(Strings.MAGNETITE_HOE_NAME, ItemIds.MAGNETITE_HOE_DEF).getInt(ItemIds.MAGNETITE_HOE_DEF);
 		
+		/* Armor */
+		//Cobalt
+		ItemIds.COBALT_HELMET = config.getItem(Strings.COBALT_HELMET_NAME, ItemIds.COBALT_HELMET_DEF).getInt(ItemIds.COBALT_HELMET_DEF);
+		ItemIds.COBALT_PLATE = config.getItem(Strings.COBALT_PLATE_NAME, ItemIds.COBALT_PLATE_DEF).getInt(ItemIds.COBALT_PLATE_DEF);
+		ItemIds.COBALT_LEGGINS = config.getItem(Strings.COBALT_LEGGINS_NAME, ItemIds.COBALT_LEGGINS_DEF).getInt(ItemIds.COBALT_LEGGINS_DEF);
+		ItemIds.COBALT_SHOES = config.getItem(Strings.COBALT_SHOES_NAME, ItemIds.COBALT_SHOES_DEF).getInt(ItemIds.COBALT_SHOES_DEF);
+		
 		}catch(Exception e){
 			FMLLog.log(Level.SEVERE, e, Reference.MOD_ID+" has had a problem loading its configuration.");
 		}finally{

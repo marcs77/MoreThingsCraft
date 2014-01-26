@@ -40,4 +40,11 @@ public class Strings {
 	public static final String MAGNETITE_SHOVEL_NAME = "magnetiteShovel";
 	public static final String MAGNETITE_SWORD_NAME = "magnetiteSword";
 	public static final String MAGNETITE_HOE_NAME = "magnetiteHoe";
+	
+	/* Armor */
+	//Cobalt
+	public static final String COBALT_HELMET_NAME = "cobaltHelmet";
+	public static final String COBALT_PLATE_NAME = "cobaltPlate";
+	public static final String COBALT_LEGGINS_NAME = "cobaltLeggins";
+	public static final String COBALT_SHOES_NAME = "cobaltShoes";
 }

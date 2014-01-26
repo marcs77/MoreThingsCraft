@@ -18,5 +18,10 @@
 	<entry key="item.magnetiteIngot.name">Magnetite Ingot</entry>
 	<entry key="item.copperIngot.name">Copper Ingot</entry>
 	<entry key="item.tinIngot.name">Tin Ingot</entry>
+	<entry key="item.cobaltPickaxe.name">Cobalt Pickaxe</entry>
+	<entry key="item.cobaltAxe.name">Cobalt Axe</entry>
+	<entry key="item.cobaltShovel.name">Cobalt Shovel</entry>
+	<entry key="item.cobaltHoe.name">Cobalt Hoe</entry>
+	<entry key="item.cobaltSword.name">Cobalt Sword</entry>
 	<entry key="info.damagetool">This tool has %d uses left.</entry>
 </properties>
